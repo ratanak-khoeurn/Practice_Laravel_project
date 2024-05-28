@@ -19,7 +19,7 @@ class Student extends Model
         'age',
         'province',
         'score',
-        'phone',
+        'phoneNumber',
     ];
 
     public static function list()

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\PromotionController;
 use App\Http\Controllers\API\StudentController;
@@ -47,3 +48,10 @@ Route::post('/promotion/create',[PromotionController::class,'store'])->name('pro
 Route::get('/promotion/show/{id}',[PromotionController::class,'show'])->name('promotion.show');
 Route::put('/promotion/update/{id}',[PromotionController::class,'update'])->name('promotion.update');
 Route::delete('/promotion/delete/{id}',[PromotionController::class,'destroy'])->name('promotion.destroy');
+
+//order products
+Route::get('/order/list',[OrderController::class,'index'])->name('order.list');
+Route::post('/order/create',[OrderController::class,'store'])->name('order.create');
+Route::get('/order/show/{id}',[OrderController::class,'show'])->name('order.show');
+Route::put('/order/update/{id}',[OrderController::class,'update'])->name('order.update');
+Route::delete('/order/delete/{id}',[OrderController::class,'destroy'])->name('order.destroy');
